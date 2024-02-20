@@ -7,14 +7,14 @@
 
 #define MAX_CATEGORIES 3
 #define MAX_QUESTIONS 3
-#define MAX_CATEGORY_LENGTH 100
-#define MAX_QUESTION_LENGTH 100
+#define MAX_CATEGORIES_LENGTH 100
+#define MAX_QUESTIONS_LENGTH 100
 #define MAX_ANSWER_LENGTH 100
 
 
 struct Question {
-    char category[MAX_CATEGORY_LENGTH];
-    char question[MAX_QUESTION_LENGTH];
+    char category[MAX_CATEGORIES_LENGTH];
+    char question[MAX_QUESTIONS_LENGTH];
     char answer[MAX_ANSWER_LENGTH];
     int value;
     bool answered;
