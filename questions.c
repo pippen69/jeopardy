@@ -107,9 +107,7 @@ void display_question(char *category, int value)
         //loops question
         for (int j = 0; j< MAX_QUESTIONS; j++) {
             //question is checked with cateogry 
-            if (strcmp(question[i][j].category, category) == 0 &&
-            //check if question has been answered 
-                question[i][j].value == value && !question[i][j].answer) {
+            if (strcmp(question[i][j].category, category) == 0 && question[i][j].value == value && question[i][j].answer) {
 
                 printf("Question: %s\n", question[i][j].question);
                 return;
@@ -122,7 +120,7 @@ bool valid_answer(char *category, int value, char *answer)
         for (int j = 0; j < MAX_QUESTIONS; j++) {
 
             //checks if the the question in the category matches the string input 
-            if (strcmp(question[i][j].category, category) == 0 && question[i][j].value == value && !question[i][j].answer) {
+            if (strcmp(question[i][j].category, category) == 0 && question[i][j].value == value && question[i][j].answer) {
 
                     //if it matches 
                 if (strcmp(question[i][j].answer, answer) == 0) {
@@ -145,8 +143,6 @@ bool already_answered(char *category, int value)
 {
     for (int i = 0; i < MAX_CATEGORIES; i++) {
         for (int j = 0; j < MAX_QUESTIONS; j++) {
-            if (strcmp(question[i][j].category, category) == 0 &&
-                question[i][j].value == value && question[i][j].answer) {
+            if (strcmp(question[i][j].category, category) == 0 && question[i][j].value == value && question[i][j].answer) {
                 return true;
-    return false;
 }
