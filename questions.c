@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
-//#include "questions.h"
+#include "questions.h"
 
-#define MAX_CATEGORIES 3
-#define MAX_QUESTIONS 3
+#define MAX_CATEGORIES 5
+#define MAX_QUESTIONS 5
 #define MAX_CATEGORIES_LENGTH 100
 #define MAX_QUESTIONS_LENGTH 100
 #define MAX_ANSWERS_LENGTH 100
@@ -115,7 +115,9 @@ void display_question(char *category, int value)
                 printf("Question: %s\n", question[i][j].question);
                 return;
 }
-
+}
+}
+}
 // Returns true if the answer is correct for the question for that category and dollar value
 bool valid_answer(char *category, int value, char *answer)
 {
@@ -138,7 +140,8 @@ bool valid_answer(char *category, int value, char *answer)
                 }
             }
         }
-    }    
+    }
+return false;	    
 }
 
 // Returns true if the question has already been answered
@@ -152,5 +155,16 @@ bool already_answered(char *category, int value)
 }
         }
     }
-     return false;
+     return false ;
+
+     }
+
+int main (){
+ void initialize_game(void);
+void display_categories(void);
+void display_question(char *category, int value);
+bool valid_answer(char *category, int value, char *answer);
+	bool already_answered(char *category, int value);
+
+
 }
