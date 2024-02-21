@@ -5,8 +5,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX_CATEGORIES 3
-#define MAX_QUESTIONS 3
+#define MAX_CATEGORIES 5
+#define MAX_QUESTIONS 5
 #define MAX_CATEGORIES_LENGTH 100
 #define MAX_QUESTIONS_LENGTH 100
 #define MAX_ANSWER_LENGTH 100
